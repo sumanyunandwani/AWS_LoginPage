@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body {
+    background-color: powderblue;
+}
+p {
+    color: red;
+}
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input[type="file"] {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+input[type="file"]:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input:focus {
+  border: 3px solid #555;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<div align="center">
+    <div><h1>Registration Page</h1></div>
+    <div>
+        <form action="{{url_for('registration')}}" method="POST" enctype="multipart/form-data">
+            <br><br>
+            <input id="username" name="username" type="text" placeholder="User Name" autocomplete="off"/> <br><br>
+            <input id="password" name="password" type="password" placeholder="Password" autocomplete="off"/> <br><br>
+            <input id="firstname" name="firstname" type="text" placeholder="First Name" autocomplete="off"/> <br><br>
+            <input id="lastname" name="lastname" type="text" placeholder="Last Name" autocomplete="off"/> <br><br>
+            <input id="email" name="email" type="text" placeholder="Email" autocomplete="off"/> <br><br>
+            <input type="file" id="textfile" name="textfile" placeholder="Upload File">
+            <br><br>
+            <button id="submit" name="submit">Register</button>
+        </form>
+    </div>
+    <p>Already have an account? Please click <a href="{{url_for('login')}}">here to login</a></p>
+</div>
+</body>
+</html>
